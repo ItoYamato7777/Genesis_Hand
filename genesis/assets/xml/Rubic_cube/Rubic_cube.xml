@@ -1,0 +1,49 @@
+<mujoco model="Rubic_cube">
+  <default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2" density="0" />
+    </default>
+    <default class="collision">
+      <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="1 1 1 1" />
+    </default>
+  </default>
+
+  <asset>
+    <material name="Black" specular="0.5" shininess="1.0" rgba="0.000000 0.000000 0.000000 1.000000"/>
+    <material name="Blue" specular="0.5" shininess="0.850493835" rgba="0.000000 0.206883 0.393114 1.000000"/>
+    <material name="Green" specular="0.5" shininess="0.864211243" rgba="0.000000 0.800000 0.002567 1.000000"/>
+    <material name="Orange" specular="0.5" shininess="0.836886169" rgba="0.800000 0.171128 0.030218 1.000000"/>
+    <material name="Red" specular="0.5" shininess="0.992606262" rgba="0.800000 0.021275 0.021275 1.000000"/>
+    <material name="White" specular="0.5" shininess="0.81" rgba="0.615177 0.615177 0.615177 1.000000"/>
+    <material name="Yellow" specular="0.5" shininess="0.8919752200000001" rgba="0.800000 0.710416 0.106449 1.000000"/>
+    <mesh file="Rubic_cube_0.obj"/>
+    <mesh file="Rubic_cube_1.obj"/>
+    <mesh file="Rubic_cube_2.obj"/>
+    <mesh file="Rubic_cube_3.obj"/>
+    <mesh file="Rubic_cube_4.obj"/>
+    <mesh file="Rubic_cube_5.obj"/>
+    <mesh file="Rubic_cube_6.obj"/>
+  </asset>
+  <worldbody>
+    <body name="Rubic_cube">
+      <freejoint/>
+      <geom mesh="Rubic_cube_0" material="Yellow" class="visual"/>
+      <geom mesh="Rubic_cube_1" material="White" class="visual"/>
+      <geom mesh="Rubic_cube_2" material="Orange" class="visual"/>
+      <geom mesh="Rubic_cube_3" material="Blue" class="visual"/>
+      <geom mesh="Rubic_cube_4" material="Green" class="visual"/>
+      <geom mesh="Rubic_cube_5" material="Red" class="visual"/>
+      <geom mesh="Rubic_cube_6" material="Black" class="visual"/>
+      
+      <!-- <geom type="box" size="1 1 1" mass="100" class="collision"/> -->
+
+      <geom mesh="Rubic_cube_0" class="collision"/>
+      <geom mesh="Rubic_cube_1" class="collision"/>
+      <geom mesh="Rubic_cube_2" class="collision"/>
+      <geom mesh="Rubic_cube_3" class="collision"/>
+      <geom mesh="Rubic_cube_4" class="collision"/>
+      <geom mesh="Rubic_cube_5" class="collision"/>
+      <geom mesh="Rubic_cube_6" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>
